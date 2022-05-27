@@ -7,24 +7,17 @@
 :root {
   --lt-blue: rgba(216, 235, 247, 0.911);
   --med-blue: rgba(0, 110, 255, 0.849);
-  --white:rgb(255, 255, 255);
+  --white: rgb(255, 255, 255);
 }
+body,
+.qrCardInner,
 .container {
-  min-height: 97vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-}
-
-
-body, .qrCardInner{
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
+
+
 
 body {
   background-color: var(--lt-blue);
@@ -32,31 +25,35 @@ body {
   font-family: Ubuntu;
 }
 
-.attribution {
-  font-size: .875em;
-  text-align: center;
+.container {
+  min-height: 97vh;
+  flex-direction: column;
 }
-.attribution a {
-  color: var(--med-blue);
-}
+
+
 .qrCardOuter {
   background-color: var(--white);
   padding: 0.9375em;
   height: 28.75em;
   width: 18.75em;
   border-radius: 0.9375em;
+  font-size: 16px;
+
+}
+
+.qrCardInner,
+.qrCode{
+  width: 100%;
+  border-radius: 0.625em;
+
 }
 
 .qrCardInner {
-  width: 100%;
   height: 60%;
-  border-radius: 0.625em;
 }
 
 .qrCode {
   height: 100%;
-  width: 100%;
-  border-radius: 0.625em;
 }
 
 .cardTitle {
@@ -66,6 +63,7 @@ body {
   font-size: 1.25em;
   font-weight: 700;
 }
+
 .cardText {
   padding: 0.3125em;
   text-align: center;
@@ -73,8 +71,13 @@ body {
   margin-bottom: 0.9375em;
 }
 
-article {
-  font-size: 16px;
+.attribution {
+  font-size: 0.875em;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--med-blue);
 }
 
 @media (max-width: 400px) {
